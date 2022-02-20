@@ -12,15 +12,6 @@ public class Main {
 		return list;
 	}
 
-	private static ArrayList<Long> separateDigit(long n) {
-		ArrayList<Long> list = new ArrayList<>();
-		do {
-			list.add(n % 10);
-			n /= 10;
-		} while (n > 0);
-		return list;
-	}
-
 	private static boolean requirements(int number) {
 		if (separateDigit(number).size() != separateDigit(number * 6).size())
 			return false;
